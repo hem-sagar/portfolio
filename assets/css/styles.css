@@ -10,6 +10,13 @@
 :root{
   --first-color: #4070F4;
   --second-color: #0E2431;
+  --third-color: #fff;
+}
+
+.dark-theme{
+  --first-color:green;
+  --second-color:#fff;
+  --third-color: #0E2431;
 }
 
 /*===== Fuente y tipografia =====*/
@@ -53,6 +60,7 @@ html{
   scroll-behavior: smooth;
 }
 body{
+  background-color: var(--third-color);
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -161,10 +169,10 @@ img{
   margin-bottom: var(--mb-2);
   margin-right: var(--mb-4);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--first-color);
 }
 .home__social-icon:hover{
-  color: var(--first-color);
+  color: var(--second-color);
 }
 .home__img{
   position: absolute;
@@ -229,4 +237,17 @@ img{
     right: 10%;
   }
   
+}
+
+
+.darkicon{
+  color: var(--second-color);
+  font-size: 30px;
+  position: absolute;
+  right: 10%;
+  top:5%;
+}
+
+.darkicon:hover{
+  color: var(--first-color);
 }

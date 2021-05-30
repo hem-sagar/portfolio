@@ -15,9 +15,11 @@
         
         <main class="l-main">
             <section class="home bd-grid" id="home">
+                <!-- <div class="darkicon" ><i id="icon" class='bx bx-moon bx-tada' ></i></div> -->
+                <img class="darkicon" id="icon" src="./assets/img/moon.png" alt="">
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">HemSagar</span><br> Web Designer</h1>
-
+                    
                 </div>
 
                 <div class="home__social">
@@ -34,4 +36,17 @@
            
         </main>
     </body>
+    <script>
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function() {
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains("dark-theme")){
+                icon.src="./assets/img/sun.png";
+            }
+            else {
+                icon.src="./assets/img/moon.png";
+            }
+        }
+    </script>
 </html>
