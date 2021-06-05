@@ -12,7 +12,6 @@
 
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-
         <title>HemSagar Adhikari</title>
     </head>
     <body>
@@ -21,7 +20,7 @@
                 <!-- <div class="darkicon" ><i id="icon" class='bx bx-moon bx-tada' ></i></div> -->
                 <img class="darkicon" id="icon" src="assets/img/moon.png" alt="">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">HemSagar</span><br> Web Designer</h1>
+                    <h1 class="home__title">Hi,<br>I'am <br><span class="home__title-color" id="change">HemSagar</span></h1>
                     
                 </div>
 
@@ -48,5 +47,20 @@
                 icon.src="assets/img/moon.png";
             }
         }
+        
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(function() { // on document load
+        changer();
+    });
+    
+    function changer() {
+        var words = ["HemSagar","Web Developer","Learner"]; // add as many as you like
+        var idx = Math.floor(words.length * Math.random());  // randomizer
+        $('#change').text(words[idx]); // replaces the contents of "change"
+        var time = Math.floor(50 * Math.random() + 1000);  // in milliseconds
+        setTimeout(changer,time);  // lather, rinse, repeat
+    }
     </script>
 </html>
