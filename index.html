@@ -1,66 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/css/styles.css">
-        <!-- ==Favicon== -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="/assets/favicon/site.webmanifest">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-        <title>Hemsagar Adhikari</title>
-    </head>
-    <body>
-        <main class="l-main">
-            <section class="home bd-grid" id="home">
-                <!-- <div class="darkicon" ><i id="icon" class='bx bx-moon bx-tada' ></i></div> -->
-                <img class="darkicon" id="icon" src="assets/img/moon.png" alt="">
-                <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <br><span class="home__title-color" id="change">Hemsagar</span></h1>
-                    
-                </div>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/hemsagar-adhikari-91b705171/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/hem-sagar" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                    <a href="https://twitter.com/HemsagarAdhika2" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
-                </div>
-                <div class="home__img">    
-                    <img src="assets/img/ph.png" alt="">
-                </div>
-            </section>           
-        </main>
-    </body>
-    <script>
-        var icon = document.getElementById("icon");
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
 
-        icon.onclick = function() {
-            document.body.classList.toggle("dark-theme");
-            if(document.body.classList.contains("dark-theme")){
-                icon.src="assets/img/sun.png";
-            }
-            else {
-                icon.src="assets/img/moon.png";
-            }
-        }
-        
-    </script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script type="text/javascript">
-    $(function() { // on document load
-        changer();
-    });
-    
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+
+  <title>Hemsagar Adhikari | IoT Engineer & React Native Developer</title>
+</head>
+
+<body>
+  <main class="l-main">
+    <section class="home bd-grid" id="home">
+      <img class="darkicon" id="icon" src="assets/img/moon.png" alt="Theme toggle" />
+
+      <div class="home__data">
+        <p class="home__intro">Hello, I'm</p>
+
+        <h1 class="home__title">
+          <span class="home__title-color">Hemsagar Adhikari</span>
+        </h1>
+
+        <h2 class="home__role">
+          <span id="change">IoT Engineer</span>
+        </h2>
+
+        <p class="home__subtitle">
+          IoT Engineer • React Native Developer • React • TypeScript • Embedded Systems • AIoT
+        </p>
+
+        <p class="home__description">
+          I build connected technology solutions that combine smart devices, cloud platforms,
+          mobile applications, and user-focused digital experiences.
+        </p>
+
+        <div class="home__buttons">
+          <a href="https://www.linkedin.com/in/hemsagar-adhikari/" target="_blank" class="button">
+            View LinkedIn
+          </a>
+
+          <a href="https://github.com/hem-sagar" target="_blank" class="button button-light">
+            View GitHub
+          </a>
+        </div>
+      </div>
+
+      <div class="home__social">
+        <a href="https://www.linkedin.com/in/hemsagar-adhikari/" target="_blank" class="home__social-icon">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+
+        <a href="https://github.com/hem-sagar" target="_blank" class="home__social-icon">
+          <i class="bx bxl-github"></i>
+        </a>
+
+        <a href="https://twitter.com/HemsagarAdhika2" target="_blank" class="home__social-icon">
+          <i class="bx bxl-twitter"></i>
+        </a>
+      </div>
+
+      <div class="home__img">
+        <img src="assets/img/ph.png" alt="Hemsagar Adhikari" />
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const icon = document.getElementById("icon");
+
+    icon.onclick = function () {
+      document.body.classList.toggle("dark-theme");
+
+      if (document.body.classList.contains("dark-theme")) {
+        icon.src = "assets/img/sun.png";
+      } else {
+        icon.src = "assets/img/moon.png";
+      }
+    };
+
+    const words = [
+      "IoT Engineer",
+      "React Native Developer",
+      "Mobile App Developer",
+      "Embedded Systems Developer",
+      "AIoT Enthusiast",
+      "React & TypeScript Developer",
+      "Smart Systems Developer"
+    ];
+
+    let index = 0;
+    const changeText = document.getElementById("change");
+
     function changer() {
-        var words = ["Hemsagar","Mobile App Developer", "IOT Engineer"]; // add as many as you like
-        var idx = Math.floor(words.length * Math.random());  // randomizer
-        $('#change').text(words[idx]); // replaces the contents of "change"
-        var time = Math.floor(50 * Math.random() + 1000);  // in milliseconds
-        setTimeout(changer,time);  // lather, rinse, repeat
+      changeText.textContent = words[index];
+      index = (index + 1) % words.length;
     }
-    </script>
+
+    changer();
+    setInterval(changer, 1800);
+  </script>
+</body>
 </html>
